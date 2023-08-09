@@ -1,0 +1,7 @@
+---
+- name: start service
+  service:
+    name: httpd
+    state: started
+
+# handlers file for simplerole

@@ -1,0 +1,9 @@
+---
+- name: test script               #display name  (every thing is written in "key: value" form)
+  hosts: webservers               #host details 
+  become: true                    #sudo mentioning
+
+  tasks:                          #task section
+   - name: create new user        #minimal list part 
+     user: 
+       name: nick                 #one way of mentioning user   

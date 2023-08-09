@@ -1,0 +1,11 @@
+---
+- name: Test Playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: copy file
+    copy:
+      src: /home/adminans/test
+      dest: /home/adminans/
+      mode: 0600
+      owner: nick

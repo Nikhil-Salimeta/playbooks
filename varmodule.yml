@@ -1,0 +1,13 @@
+---
+- name: Test Playbook
+  hosts: all
+  become: yes
+  vars:
+    user: funny
+
+  tasks:
+    - name: create user {{user}}
+      user:
+        name: "{{user}}"
+
+

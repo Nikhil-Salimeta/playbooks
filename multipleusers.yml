@@ -1,0 +1,11 @@
+---
+- name: Test Playbook
+  hosts: all
+  become: yes
+  tasks:
+    - name: create multiple users
+      user: name='{{item}}' state=present       # user: name='{{ item }}' is also be used
+      with_items:
+        - apple
+        - ball
+        - cat

@@ -1,0 +1,12 @@
+---
+- name: Sample yaml script        #display name  (every thing is written in "key: value" form)
+  hosts: all                      #host details 
+  become: yes                     #sudo mentioning
+
+  tasks:                          #task section
+   - name: create user            #list part 1
+     user: name=Chandu            #one way of mentioning user
+
+   - name: create another user    #list part 2
+     user:                        #other way of mentioning user using key: value method.
+       name: Pranay      

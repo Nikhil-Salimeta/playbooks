@@ -1,0 +1,9 @@
+---
+- name: Test Playbook   #failed case
+  hosts: all
+  become: yes
+  tasks:
+    - name: create multiple users
+      user: 
+        name: "{{'kon', 'con', 'pon', 'don'}}"
+        state: present   
